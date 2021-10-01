@@ -1,0 +1,30 @@
+@font-face{
+    font-family: "Osterich sans master";
+    src:url
+}
+/* font family “Courier New”,”Lucida Console” , size 32px, red (in hexadecimal), font style is oblique.  */
+
+h1{
+    font-family: 'Courier New', 'Lucida Sans';
+    font-size: 2em;
+    font-style: oblique;
+    color: #ff0000;
+}
+
+/* font family “Cedarville Cursive” (Google) , size 10vw, blue (in decimal), font variant is small caps. */
+
+p{
+    font-family: 'Cedarville Cursive';
+    font-size: 10vw;
+    color: rgb(0,0,255);
+    font-variant: small-caps;
+}
+
+/* font family “Ostrich sans master” (download from Moodle), size 1.6vw, pink (HSLA)320, 100%, 60%, font stretch is expanded */
+
+footer{
+    font-family: 'Ostrich sans master';
+    font-size: 1.6vw;
+    color: hsla(320, 100, 60, 1);
+    font-stretch: expanded;
+}
