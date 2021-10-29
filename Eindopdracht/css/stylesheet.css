@@ -1,3 +1,5 @@
+@media screen and (max-width: 600px)
+{
 nav
 {
   display: block;
@@ -110,12 +112,12 @@ nav input:checked ~ span:nth-last-child(2)
 .navbar
 {
   position: absolute;
-  width: 300px;
+  width: 100%;
   margin: -100px 0 0 -50px;
-  padding: 50px;
+  padding-right: 50px;
   padding-top: 125px;
   
-  background: #ededed;
+  background: #305496;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -136,6 +138,132 @@ nav input:checked ~ span:nth-last-child(2)
  * And let's slide it in from the left
  */
 nav input:checked ~ ul
+  {
+    transform: none;
+  }
+
+  video{
+    max-width: 80%;
+    justify-content: center;
+  }
+
+section{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+  #article3{
+    background-color: #E2EFDA;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    order: 1;
+  }
+  #article2{
+    background-color: #C6E0B4;
+    flex-direction: column-reverse;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    order: 3;
+  }
+  #article1{
+    background-color: #A9D08E;
+    flex-direction: column-reverse;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    order: 5;
+  }
+
+ aside{
+   background-color: #FFF2CC;
+   flex-basis: 100%;
+ } 
+ 
+
+
+
+
+
+
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+@media screen and (min-width: 601px) and (max-width: 1179px)
 {
-  transform: none;
+nav span
+{
+  visibility: hidden;
+}
+nav input 
+{
+  visibility: hidden;
+}
+#article1{
+  background-color: #E2EFDA;
+}
+#article2{
+  background-color: #C6E0B4;
+}
+#article3{
+  background-color: #A9D08E;
+}
+
+
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+@media screen and (min-width: 1180px)
+{
+nav span
+{
+  visibility: hidden;
+}
+nav input 
+{
+  visibility: hidden;
+}
+#article1{
+  background-color: #E2EFDA;
+}
+#article2{
+  background-color: #C6E0B4;
+}
+#article3{
+  background-color: #A9D08E;
+}
+
+aside{
+  float: right;
+}
+
+
+
+
+}
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+footer{
+  background-color: #D6DCE4;
+}
+#cookiebox{
+  background-color: #C65911;
 }
