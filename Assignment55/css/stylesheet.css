@@ -1,7 +1,0 @@
-col:first-child{
-    background: #FF0;
-}
-col:nth-child(2n+0)
-{
-    background: #CCC;
-}
