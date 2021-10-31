@@ -524,6 +524,7 @@ video{
   flex-basis: 100%;
   width: 300px;
   background-color: #fff2cc;
+  justify-self: right;
 }
 
 
