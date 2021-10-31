@@ -1,10 +1,13 @@
 @media screen and (max-width: 600px) /*----------------------------PHONE-----------------------*/
 {
+  header a{
+    display: none;
+  }
 nav
 {
   display: block;
   position: absolute;
-  top: 50px;
+  top: 30px;
   Right: 50px;
   
   z-index: 1;
@@ -72,14 +75,15 @@ nav span
 }
 nav input:checked ~ ul
   {
-    background: #305496; 
+    background: #305496;
+    display: block; 
   }
   nav input:checked ~ a
   {
     color: #000000;
   }
 
-/* page1 css */
+/* page1 */
 
 .page1{
   display: flex;
@@ -100,23 +104,122 @@ video{
 .page1 #article3{
     background-color: #E2EFDA;
     flex-basis: 80%;
+    padding: 20px;
     order: 2;
   }
  .page1 #article2{
     background-color: #C6E0B4;
     flex-basis: 80%;
+    padding: 20px;
     order: 4;
   }
  .page1 #article1{
     background-color: #A9D08E;
     flex-basis: 80%;
+    padding: 20px;
     order: 6;
   }
 
 
 
+/* ------page2--------
+* Mobile version
+ */
+ .page2{
+   display: grid; 
+   grid-template-columns: auto ;
+   grid-template-rows: auto;
+   grid-template-areas: 
+   ". #article5 ."
+   ". #article3 ."
+   ". #article2 ."
+   ". #article1 ."
+   ". aside .";
+ }
+ .page2 #article1{
+  background-color: #fff2cc;
+  padding: 20px;
+  order: 5;
+ }
+ .page2 #article2{
+   background-color: #e2efda;
+   padding: 20px;
+   order: 4;
+ }
+ .page2 #article4{
+   display: none;
+}
+.page2 #article3{
+   background-color: #acb9ca;
+   padding: 20px;
+   order: 3;
+}
+.page2 #article5{
+   background-color: #ddebf7 ;
+   padding: 20px;
+   order: 2;
+}
+.page2 #article6{
+   display: none;
+}
+.page2 aside{
+  background-color: #d0cece;
+  padding: 20px;
+  order: 6;
+}
 
 
+/* page3 */
+.page3{
+  display: grid;
+  grid-template-columns: [c1] auto [c2];
+  grid-template-rows: [r1] auto [r2] auto [r3] auto [r4];
+}
+.ticketprices{
+  grid-row: r1 / r2 ;
+}
+.ticketprices td{
+  background-color: #bdd7ee; 
+}
+.page3 #copyrighttable{
+  background-color: #ddebf7;
+  grid-row: r2/r3;
+  padding: 20px;
+}
+.ticketprices th, td{
+  border: 2px solid black;
+  background-color: #bdd7ee;
+}
+.page3 aside{
+  padding: 10px;
+  background-color: #d0cece;
+  grid-row: r3/r4;
+  display: grid;
+  justify-content: space-around;
+}
+
+
+
+/* Contact page (page4) */
+.page4{
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+.page4 article{
+  background-color: #fff2cc;
+  padding: 20px;
+}
+.page4 fieldset{
+  background-color: #bdd7ee;
+  display: grid;
+  grid-template-columns: auto ;
+  grid-template-rows: auto auto auto auto auto auto auto;
+}
+.page4 aside img{
+  background-color: #d0cece;
+  padding: 20px;
+  justify-content: center;
+}
 
 
 }
@@ -154,7 +257,7 @@ nav ul{
 .firstnav{
   flex-flow: row;
 }
-
+/* page1 */
 .page1{
   display: flex;
   flex-wrap: wrap;
@@ -205,6 +308,148 @@ video{
 }
 
 
+/* page2 */
+.page2{
+  display: grid;
+  grid-template-columns: [start] auto [middle] auto [end];
+  grid-template-rows: [first] auto [second] auto [third] auto [fourth] auto [fifth] auto [sixth] auto [seventh] auto [eight] auto [ninth] auto [tenth] auto [eleventh];
+
+
+}
+.page2 #article1{
+  background-color: #fff2cc;
+  padding: 30px;
+  grid-column: start / middle ;
+  grid-row: first / third;
+}
+.page2 #article2{
+  background-color: #e2efda;
+  padding: 30px;
+  grid-column: middle / end;
+  grid-row: first / fourth;
+}
+.page2 #article3{
+  background-color: #acb9ca;
+  padding: 30px;
+  grid-column: start / middle ;
+  grid-row: third / seventh ;
+}
+.page2 #article4{
+  display: none;
+}
+.page2 #article5{
+  background-color: #ddebf7;
+  padding: 30px;
+  grid-column: middle / end;
+  grid-row: fourth / seventh;
+}
+.page2 #article6{
+  background-color: #fce4d6;
+  padding: 30px;
+  grid-column: start / end;
+  grid-row: seventh / ninth;
+}
+.page2 #aside1{
+  background-color: #d0cece;
+  padding: 30px;
+  grid-column: start / middle;
+  grid-row: ninth / eleventh;
+  display: grid;
+  justify-content: space-around;
+}
+.page2 #aside1 img{
+  max-width: 300px;
+}
+.page2 #aside2{
+  background-color: #aeaaaa;
+  padding: 30px;
+  grid-column: middle / end;
+  grid-row: ninth / eleventh;
+  display: grid;
+  justify-content: space-around;
+}
+.page2 #aside2 img{
+  max-width: 300px;
+}
+.page2 #aside3{
+  display: none;
+}
+
+
+/* page3 */
+
+.page3{
+  display: grid;
+  grid-template-columns: [c1] auto [c2];
+  grid-template-rows: [r1] auto [r2] auto [r3] auto [r4];
+}
+.ticketprices{
+  grid-row: r1 / r2 ;
+}
+.ticketprices td{
+  background-color: #bdd7ee; 
+}
+.page3 #copyrighttable{
+  background-color: #ddebf7;
+  grid-row: r2/r3;
+  padding: 20px;
+}
+.ticketprices th, td{
+  border: 2px solid black;
+  background-color: #bdd7ee;
+}
+.page3 aside{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  justify-content: center;
+}
+.page3 #aside1{
+  padding: 10px;
+  background-color: #d0cece;
+}
+.page3 #aside2{
+  padding: 10px;
+  background-color: #d0cece;
+}
+.page3 #aside3{
+  display: none;
+}
+
+/* page 4 */
+.page4{
+  display: grid;
+  grid-template-columns:[c1] 70% [c2] 30% [c3];
+  grid-template-rows: [r1] auto [r2] auto [r3] ;
+}
+.page4 article{
+  grid-column: c1/c3;
+  grid-row: r1/r2;
+  background-color: #fff2cc;
+  padding: 20px;
+}
+.page4 fieldset{
+  background-color: #bdd7ee;
+  grid-column: c1/c2;
+  grid-row: r2/r3;
+  display: grid;
+  grid-template-columns: auto ;
+  grid-template-rows: auto auto auto auto auto auto auto;
+}
+.page4 aside img{
+  background-color: #d0cece;
+  grid-column: c2/c3;
+  grid-row: r2/r3;
+  padding: 20px;
+  justify-content: center;
+  max-width: 200px;
+  justify-self: end;
+}
+.page4 aside{
+  justify-content: end;
+}
+
+
 
 }
 
@@ -241,6 +486,8 @@ nav ul{
   flex-flow: row;
 }
 
+
+/* page1 */
 .page1{
     display: flex;
     flex-direction: column;
@@ -256,28 +503,185 @@ video{
   max-width: 60%;
   display: flex;
   flex-direction: row;
-  flex-basis: 25%;
+  flex-basis: 100%;
 }
 .page1 #article2{
   background-color: #C6E0B4;
   max-width: 60%;
   display: flex;
   flex-direction: row;
-  flex-basis: 25%;
+  flex-basis: 100%;
 }
 .page1 #article3{
   background-color: #A9D08E;
   max-width: 60%;
   display: flex;
   flex-direction: row;
-  flex-basis: 25%;
+  flex-basis: 100%;
 }
 
-aside{
-  align-items: right;
+.page1 aside{
   flex-basis: 100%;
   width: 300px;
+  background-color: #fff2cc;
 }
+
+
+/* page2 */
+.page2{
+  display: grid;
+  grid-template-columns: [c1] 45% [c2] 35% [c3] 20% [c4] ;
+  grid-template-rows: [r1] auto [r2] auto [r3] auto [r4] auto [r5] auto [r6] auto [r7] auto [r8] auto [r9] auto [r10];
+}
+.page2 #article1{
+  background-color: #FFF2CC;
+  grid-column: c2 / c3;
+  grid-row: r1 / r7;
+  padding: 30px;
+}
+.page2 #article2{
+  background-color: #E2EFDA;
+  grid-column: c1 / c2;
+  grid-row: r1 / r3;
+  padding: 30px;
+}
+.page2 #article3{
+  background-color: #acd9ca;
+  grid-column: c3 / c4;
+  grid-row: r1 / r4;
+  padding: 30px;
+}
+.page2 #article4{
+  background-color: #C6E0B4;
+  grid-column: c3 / c4;
+  grid-row: r4 / r8;
+  padding: 30px;
+}
+.page2 #article5{
+  background-color: #ddebf7;
+  grid-column: c1 / c2;
+  grid-row: r3 / r9;
+  padding: 30px;
+}
+.page2 #article6{
+  background-color: #fce4d6;
+  grid-column: c2 / c4;
+  grid-row: r7 / r8;
+  padding: 30px;
+}
+.page2 #aside1{
+  background-color: #d0cece;
+  padding: 30px;
+  grid-column: c1 / c2;
+  grid-row: r8 / r10;
+  display: grid;
+  justify-content: space-around;
+}
+.page2 #aside1 img{
+  max-width: 100%;
+}
+.page2 #aside2{
+  background-color: #aeaaaa;
+  color: #FFFFFF;
+  grid-column: c2 / c3;
+  grid-row: r8 / r10;
+  display: grid;
+  justify-content: space-around;
+}
+.page2 #aside2 img{
+  max-width: 100%;
+}
+.page2 #aside3{
+  background-color: #757171;
+  grid-column: c3 / c4;
+  grid-row: r8 / r10;
+  justify-content: stretch;
+  color: #FFFFFF;
+  display: grid;
+  justify-content: space-around;
+}
+.page2 #aside3 img{
+  max-width: 90%;
+}
+
+
+/* page3 */
+
+.page3{
+  display: grid;
+  grid-template-columns: [c1] 70% [c2] 30% [c3];
+  grid-template-rows: [r1] auto [r2] auto [r3] auto [r4];
+}
+.ticketprices{
+  grid-column: c1/ c2;
+  grid-row: r1/ r3;
+}
+.ticketprices td{
+  background-color: #bdd7ee; 
+}
+.page3 #copyrighttable{
+  background-color: #ddebf7;
+  padding: 20px;
+  grid-column: c1 / c2;
+  grid-row: r3 / r4;
+}
+.ticketprices th, td{
+  border: 2px solid black;
+  background-color: #bdd7ee;
+}
+.page3 #aside1{
+  padding: 10px;
+  background-color: #d0cece;
+}
+.page3 #aside2{
+  padding: 10px;
+  background-color: #d0cece;
+}
+.page3 #aside3{
+  padding: 10px;
+  background-color: #d0cece;
+}
+.page3 aside img{
+  max-width: 90%;
+}
+
+/* page4 */
+
+.page4{
+  display: grid;
+  grid-template-columns:[c1] 70% [c2] 30% [c3];
+  grid-template-rows: [r1] auto [r2] auto [r3] ;
+ 
+}
+.page4 article{
+  grid-column: c1/c3;
+  grid-row: r1/r2;
+  background-color: #fff2cc;
+  padding: 20px;
+}
+.page4 fieldset{
+  background-color: #bdd7ee;
+  grid-column: c1/c2;
+  grid-row: r2/r3;
+  display: grid;
+  grid-template-columns: auto ;
+  grid-template-rows: auto auto auto auto auto auto auto;
+}
+.page4 aside img{
+  background-color: #d0cece;
+  grid-column: c2/c3;
+  grid-row: r2/r3;
+  padding: 20px;
+  max-width: 300px;
+}
+.page4 aside{
+  display: grid;
+  justify-content: right;
+}
+
+
+
+
 
 
 
@@ -299,7 +703,8 @@ footer{
 #cookieboxflex{
   z-index: 9999;
   background-color: #C65911;
-  border-style: solid;
+  color: #FFFFFF;
+  border: solid black;
   display: flex;
   position: fixed;
   right:0;
@@ -311,10 +716,10 @@ footer{
   align-content: center;
   justify-content: center;
   flex-grow: 0;
-  max-width: 600;
+  max-width: 60%;
   padding: 20px;  
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 p input{
   color: white;
@@ -324,7 +729,25 @@ p input:hover{
   background-color: #414241;
 }
 p input:active ~ #cookieboxflex{
-  visibility: hidden;
+  display: none;
+}
+
+#cookieboxgrid{
+  z-index: 9999;
+  background-color: #C65911;
+  color: #FFFFFF;
+  border: solid black;
+  padding: 20px; 
+  position: fixed;
+  right:0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  margin-left: 15;
+  margin-right: 15%;
 }
 
 
@@ -332,4 +755,9 @@ nav a:visited {
   color: #FFFFFF;
   background-color: transparent;
   text-decoration: none;
+
+}
+
+header h2{
+  padding: 10px;
 }
