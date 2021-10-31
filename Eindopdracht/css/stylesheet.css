@@ -12,7 +12,6 @@ nav
   
   z-index: 1;
   
-  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -38,13 +37,8 @@ nav input
   
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
 nav span
 {
   display: block;
@@ -747,7 +741,7 @@ p input:active ~ #cookieboxflex{
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto;
-  margin-left: 15;
+  margin-left: 15%;
   margin-right: 15%;
 }
 
